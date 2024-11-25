@@ -69,6 +69,9 @@ class ReviewListAPIView(generics.ListCreateAPIView):
         return Response(ReviewSerializer(review).data, status=status.HTTP_201_CREATED)
 
 
+
+
+
 class ReviewDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
